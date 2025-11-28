@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <title>Doc</title>
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <h1 class="h1 bg-primary rounded-3 py-3 px-3 mx-auto my-3 text-center w-50">Convertitore universale</h1>
+        <div class="container w-75">
+            <p class="my-3">Inserisci un numero, seleziona le unità di misura e converti rapidamente i tuoi dati!</p>
+            <div class="input-group">
+                <label class="input-group-text" for="inputValue">Converti da</label>
+                <input type="number" class="form-control" name="inputValue" id="inputValue">
+                <select class="form-control form-select" onchange="setUnit()" name="source" id="source">
+                    <optgroup id="sourceLabel0" label="Peso">
+                        <option id="source0" value="0">Kg</option>
+                        <option id="source1" value="1">g</option>
+                        <option id="source2" value="2">mg</option>
+                    </optgroup>
+                    <optgroup id="sourceLabel1" label="Lunghezza">
+                        <option id="source3" value="3">m</option>
+                        <option id="source4" value="4">cm</option>
+                    </optgroup>
+                    <optgroup id="sourceLabel2" label="Sistema di numerazione">
+                        <option id="source5" value="5">Decimale</option>
+                        <option id="source6" value="6">Binario</option>
+                        <option id="source7" value="7">Esadecimale</option>
+                    </optgroup>
+                    <optgroup id="sourceLabel3" label="Temperatura">
+                        <option id="source8" value="8">Celsius</option>
+                        <option id="source9" value="9">Fahrenheit</option>
+                        <option id="source10" value="10">Kelvin</option>
+                    </optgroup>
+                </select>
+                <label class="input-group-text" for="inputValue">a</label>
+                <input type="text" class="form-control" name="outputValue" id="outputValue">
+                <select name="target" id="target">
+                    <optgroup id="targetLabel0" label="Peso">
+                        <option id="target0" value="0">Kg</option>
+                        <option id="target1" value="1">g</option>
+                        <option id="target2" value="2">mg</option>
+                    </optgroup>
+                    <optgroup id="targetLabel1" label="Lunghezza">
+                        <option id="target3" value="3">m</option>
+                        <option id="target4" value="4">cm</option>
+                    </optgroup>
+                    <optgroup id="targetLabel2" label="Sistema di numerazione">
+                        <option id="target5" value="5">Decimale</option>
+                        <option id="target6" value="6">Binario</option>
+                        <option id="target7" value="7">Esadecimale</option>
+                    </optgroup>
+                    <optgroup id="targetLabel3" label="Temperatura">
+                        <option id="target8" value="8">Celsius</option>
+                        <option id="target9" value="9">Fahrenheit</option>
+                        <option id="target10" value="10">Kelvin</option>
+                    </optgroup>
+                </select>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
