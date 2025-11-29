@@ -1,0 +1,77 @@
+* {
+    margin: auto;
+    box-sizing: border-box;
+}
+
+body {
+    background: lightseagreen;
+}
+
+div.container > h1 {
+    background: orange;
+    padding: 2vh 0;
+    color: orangered;
+}
+
+div.container {
+    width: 90vw;
+    height: 90vh;
+    margin-top: 3vh;
+    padding-top: 3vh;
+    margin-bottom: 3vh;
+    padding-bottom: 3vh;
+    text-align: center;
+    background: grey;
+    border: 5px white solid;
+    border-radius: 2vw;
+}
+
+div#phoneSelection {
+    display: flex;
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+    background: lightcoral;
+    border-left: 5px blue solid;
+    width: 80%;
+    height: 10vh;
+    overflow-x: hidden;
+    align-items: center;
+}
+
+button.phones {
+    background: greenyellow;
+    color: orangered;
+    font-weight: bolder;
+    width: 10vw;
+    height: 5vh;
+    border: 3px white solid;
+    border-top-right-radius: 2vh;
+    border-bottom-left-radius: 2vh;
+}
+
+button.phones:hover {
+    border: 2px lightslategray solid;
+    background: green;
+    cursor: pointer;
+    color: yellow;
+}
+
+div#info {
+    display: flex;
+    width: 80%;
+    height: 60%;
+    background: white;
+    border: 5px smokewhite solid;
+    border-radius: 50px;
+    flex-flow: row nowrap;
+}
+
+div#info > div {
+    background: lightskyblue;
+    padding: 5vh;
+    border-radius: 25px;
+}
+
+div#info > div > h1 {
+    color: orangered;
+}

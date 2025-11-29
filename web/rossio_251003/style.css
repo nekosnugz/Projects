@@ -1,0 +1,19 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+.header {
+    width: 100%;
+    height: 8vh;
+    background-color:lightsteelblue;
+}
+
+#welcome_message {
+    text-align: right;
+    font-size: 2em;
+    line-height: 8vh;
+    font-family:'Open Sans', 'Helvetica Neue';
+    opacity: 30%;
+    color:slateblue;
+}

@@ -1,0 +1,63 @@
+* {
+    box-sizing: border-box;
+    margin: auto;
+}
+
+.carousel {
+    display: flex;
+    flex-flow: row wrap;
+    width: 80vw;
+    border: 1px black solid;
+    list-style-type: none;
+}
+
+.container {
+    margin: auto;
+    width: 80%;
+}
+
+.container > h1 {
+    text-align: center;
+    padding: 3vh 0;
+}
+
+.slide {
+    width: 60vh;
+    height: 60vh;
+    border: 3px blue solid;
+    text-align: center;
+}
+
+#slideContainer {
+    width: 60vh;
+    height: 60vh;
+    overflow: hidden;
+}
+
+.radio {
+    margin: 3vw;
+    width: 80vw;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    padding: 0 25%;
+}
+
+.radio > input {
+    width: 5vh;
+    height: 5vh;
+}
+
+div.active {
+    display: block;
+}
+
+div.inactive {
+    display: none;
+}
+
+.slide > img {
+    max-width: 40vw;
+    height: auto;
+    border: solid;
+}

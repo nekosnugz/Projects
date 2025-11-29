@@ -1,0 +1,13 @@
+body {
+    background: black;
+}
+
+#pallina {
+    width: 100px;
+    height: 100px;
+    border-radius: 50px;
+    background: red;
+    position: fixed;
+    left: 320px;
+    top: 100px;
+}

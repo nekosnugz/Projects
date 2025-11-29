@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div>
+        <h1>Classifica film</h1>
+        <ol id="lista"></ol>
+        <form>
+            <input id="email" name="email" type="email" placeholder="E-mail">
+            <input id="filmSelection" name="filmSelection" type="number" placeholder="Indice">
+            <button onclick="sendRating()" type="button">Invia voto</button>
+            <button onclick="listMostVoted()" type="button">Visualizza film più votati</button>
+        </form>
+        
+        <div id="results"></div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BestMovies.com</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Best performing movies</h1>
+        <div class="carousel">
+            <button type="button" onclick="setSlide('next')">Previous</button>
+
+            <div id="slideContainer">
+                <div class="slide" id="slide1">
+                    <img src="" alt="Movie 1">
+                    <p id="title1">Movie no. 1</p>
+                </div>
+            </div>
+
+            <button type="button" onclick="setSlide('previous')">Next</button>
+            <div class="radio">
+                <input type="radio" name="currentPage" value="0" onclick="setSlide(0)">
+                <input type="radio" name="currentPage" value="1" onclick="setSlide(1)">
+                <input type="radio" name="currentPage" value="2" onclick="setSlide(2)">
+                <input type="radio" name="currentPage" value="3" onclick="setSlide(3)">
+                <input type="radio" name="currentPage" value="4" onclick="setSlide(4)">
+            </div>
+        </div>
+
+        <div class="replaceMovie">
+            <h1>Aggiorna la classifica</h1>
+            <label for="newMovie">Inserisci il titolo di un film</label>
+            <input id="movieName" type="text" placeholder="Titolo">
+            <input id="movieImg" type="file" placeholder="Carica un'immagine" accept=".jpg, .webp, .gif">
+            <button type="submit" onclick="updateLeaderboard()">Aggiorna classifica</button>
+        </div>
+    </div>
+</body>
+</html>
