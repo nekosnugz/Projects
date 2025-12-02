@@ -48,7 +48,7 @@ public class verifica {
                 if (cognome[j+1] == null) break;
                 if (cognome[j].compareToIgnoreCase(cognome[j+1]) > 0) {
                     int temp = indices[j];
-                    indices[j] = indices[j+1];
+                    indices[j] = indices[j+1];b
                     indices[j+1] = temp;
                 }
             }
