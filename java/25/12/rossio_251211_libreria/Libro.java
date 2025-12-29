@@ -22,7 +22,7 @@ public class Libro {
     }
 
     public Libro(String titolo, String autore) {
-
+        this(titolo, autore, 0, 0);
     }
     
     public Libro(Libro libro) {
@@ -67,7 +67,7 @@ public class Libro {
     }
 
     public void setAnno(int anno) {
-        if (validaAnno(anno)) this.anno = anno;;
+        if (validaAnno(anno)) this.anno = anno;
     }
 
     public void setPagine(int pagine) {
@@ -113,6 +113,4 @@ public class Libro {
     private boolean validaAnno(int anno) {
         return anno >= 1450 && anno <= 2025;
     }
-
-
 }
