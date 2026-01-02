@@ -2,14 +2,22 @@
 
 import java.util.*;
 import java.io.*;
-import java.lang.*;
+// import java.lang.*;
 
 public class caramelle {
 
     public static int mcm(int a, int b) {
-        if (b == 0) return a;
-        else if (a % b == 0) return b;
-        else return mcm(b, a % b);
+        return Math.abs((a * b) / mcd(a, b));
+    }
+
+    public static int mcd(int a, int b) {
+        int r;
+        while (b != 0) {
+            r = a % b;
+            a = b;
+            b = r;
+        }
+        return Math.abs(a);
     }
 
     public static void main(String[] args) throws FileNotFoundException, IOException {
@@ -17,8 +25,8 @@ public class caramelle {
         InputStream fin = System.in;
         OutputStream fout = System.out;
         // decommenta le due righe seguenti se vuoi leggere/scrivere da file
-        // fin = new FileInputStream("input.txt");
-        // fout = new FileOutputStream("output.txt");
+        fin = new FileInputStream("input.txt");
+        fout = new FileOutputStream("output.txt");
 
         BufferedWriter writer = new BufferedWriter(new OutputStreamWriter(fout));
         reader = new BufferedReader(new InputStreamReader(fin));
@@ -35,7 +43,15 @@ public class caramelle {
             int c = 0;
 
             // INSERISCI IL TUO CODICE QUI
-            for (int i = 0; i < V.length; i++) c = mcm(c, V[i]);
+            // Arrays.sort(V);
+            
+            int temp = V[0];
+            for (int i = 0; i < V.length - 1; i++) {
+                // System.out.println(V[i]);
+                temp = mcm(temp, V[i]);
+            }
+
+            c = temp;
 
             writer.write("Case #");
             writer.write(String.valueOf(test));
