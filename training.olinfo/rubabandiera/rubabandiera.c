@@ -1,9 +1,11 @@
 #include <stdlib.h>
 #include <stdio.h>
+#include <stdbool.h>
 
 typedef struct Node {
     int value;
     struct Node* nextNode;
+    bool isEliminated;
 } Node;
 
 int main() {
@@ -17,22 +19,34 @@ int main() {
     for (int i = 0; i < Q; i++) {
         scanf("%d", &N);
 
+        if (N == 0) continue;
+        if (N == 1 || N == 2) {
+            printf("%d\n", 1);
+            continue;
+        }
+
         nodes = calloc(N, sizeof(Node));
         
         for (j = 0; j < N; j++) {
             nodes[j].value = j+1;
             nodes[j].nextNode = &nodes[(j + 1) % (N - 1)];
+            nodes[j].isEliminated = false;
         }
 
-        for (j = 0; j < N; j++) {
-            printf("Index: %d - Value %2d - Address: %p\n", j,nodes[j].value, nodes[j].nextNode);
+        currentNode = nodes[0];
+
+        for (j = 0; j < N - 1; j++) {
+            if (currentNode.nextNode->isEliminated) {
+                currentNode = *currentNode.nextNode;
+            } else {
+
+            }
+
         }
 
-        while (0 > 1) {
-            
 
-        }
-
+        printf("%d\n", 42);
+        free(nodes);
     }
 
     return 0;
