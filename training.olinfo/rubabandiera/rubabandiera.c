@@ -38,9 +38,6 @@ int main() {
         for (j = 0; j < N - 1; j++) {
             if (currentNode.nextNode->isEliminated) {
                 currentNode = *currentNode.nextNode;
-            } else {
-
-            }
 
         }
 
