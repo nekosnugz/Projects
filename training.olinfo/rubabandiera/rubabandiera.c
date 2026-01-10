@@ -5,18 +5,17 @@
 typedef struct Node {
     int value;
     struct Node* nextNode;
-    bool isEliminated;
 } Node;
 
 int main() {
     int Q, N;
-    int j = 0;
+    int i, j = 0;
     Node* nodes;
     Node currentNode;
     
     Q = scanf("%d", &Q);
     
-    for (int i = 0; i < Q; i++) {
+    for (i = 0; i < Q; i++) {
         scanf("%d", &N);
 
         if (N == 0) continue;
@@ -30,20 +29,17 @@ int main() {
         for (j = 0; j < N; j++) {
             nodes[j].value = j+1;
             nodes[j].nextNode = &nodes[(j + 1) % (N - 1)];
-            nodes[j].isEliminated = false;
         }
 
         currentNode = nodes[0];
 
-        for (j = 0; j < N - 1; j++) {
-            if (currentNode.nextNode->isEliminated) {
-                currentNode = *currentNode.nextNode;
-
+        for (j = 0; j < N; j++) {
+            currentNode.nextNode = currentNode.nextNode->nextNode;
+            currentNode = *currentNode.nextNode;
         }
 
 
-        printf("%d\n", 42);
-        free(nodes);
+        printf("%d\n", currentNode.value);
     }
 
     return 0;

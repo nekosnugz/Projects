@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 
+# with open("output.txt", 'w+') as f:
 Q = int(input())
 
 for i in range(Q):
@@ -10,10 +11,19 @@ for i in range(Q):
     for k in range(N):
         A.append(k+1)
 
-    print(A)
+    tmp = 0
+    endedOnLastElement = True
+    
+    while len(A) > 1:
+        for i in range(len(A)):
+            if (i + endedOnLastElement) % 2 == 0:
+                tmp = A[i-1]
+                A[i] = 0
+                pass
 
-    for i in range(N-1):
-        A.pop((i+1) % len(A))
-        print(A)
+        A = list(set(A).remove(0)).sort()
 
-    print("Result: ", A[0])
+        endedOnLastElement = (tmp == A[-1])
+        # f.write(f"{A}\n")
+    
+    print(A[0])
